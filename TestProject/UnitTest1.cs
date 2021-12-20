@@ -8,6 +8,7 @@ namespace TestProject
     public class UnitTest1
     {
         [Fact(DisplayName ="Calling Greet with a name should return Hello name")]
+        [Trait("Category","Unit")]
         public void Greet_Should_Return_Hello_Martin()
         {
             Greeting greeting = new Greeting();
@@ -18,6 +19,7 @@ namespace TestProject
         }
 
         [Fact]
+        [Trait("Category", "Unit")]
         public void Greet_Should_Return_HELLO_KALLE()
         {
             Greeting greeting = new Greeting();
