@@ -7,14 +7,8 @@ namespace TestProject
 {
     public class UnitTest1
     {
-        [Fact]
-        public void A_Failing_Test()
-        {
-            Assert.True(false);
-        }
-
-        [Fact(DisplayName ="Calling Greet with a name should return Hello name")]
-        [Trait("Category","Unit")]
+        [Fact(DisplayName = "Calling Greet with a name should return Hello name")]
+        [Trait("Category", "Unit")]
         public void Greet_Should_Return_Hello_Martin()
         {
             Greeting greeting = new Greeting();
@@ -50,7 +44,7 @@ namespace TestProject
         {
             Greeting greeting = new Greeting();
 
-            Assert.Throws<ArgumentException>(()=>greeting.Greet("1"));
+            Assert.Throws<ArgumentException>(() => greeting.Greet("1"));
         }
 
         [Fact]
