@@ -2,12 +2,14 @@
 {
     internal class Coverage
     {
-        public int MethodThatDoesSomething(int value)
+
+
+        public int TruncateNegativeValueToZero(int value)
         {
-            if( value > 0)
-                return value;
-            else
+            if (value <= 0)
                 return 0;
+            else
+                return value;
         }
     }
 }

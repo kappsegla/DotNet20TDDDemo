@@ -6,21 +6,21 @@ namespace TestProject
     public class CoverageTest
     {
         [Fact]
-        public void When_value_is_over_0_returns_value()
+        public void Greater_than_zero_is_unmodified()
         {
             Coverage coverage = new Coverage();
 
-            var result = coverage.MethodThatDoesSomething(1);
+            var result = coverage.TruncateNegativeValueToZero(1);
 
             Assert.Equal(1, result);
         }
 
         [Fact]
-        public void When_value_is_less_than_0_returns_0()
+        public void Negative_number_is_modified_to_zero()
         {
             Coverage coverage = new Coverage();
 
-            var result = coverage.MethodThatDoesSomething(-1);
+            var result = coverage.TruncateNegativeValueToZero(-1);
 
             Assert.Equal(0, result);
         }
