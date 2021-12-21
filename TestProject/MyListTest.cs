@@ -1,4 +1,5 @@
 ﻿using DotNet20Demo;
+using System;
 using Xunit;
 
 
@@ -41,10 +42,18 @@ namespace TestProject
 
             myList.Add(1);
             myList.Add(5);
-            
+
             Assert.Equal(1, myList.Get(0));
             Assert.Equal(5, myList.Get(1));
             Assert.Equal(2, myList.Size());
+        }
+
+        [Fact]
+        public void Get_Value_With_Invalid_Index_Throws_IndexOutOfRangeException()
+        {
+            MyList myList = new MyList();
+
+            Assert.Throws<IndexOutOfRangeException>(() => myList.Get(0));
         }
     }
 }

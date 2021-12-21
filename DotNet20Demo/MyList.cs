@@ -17,6 +17,8 @@
 
         public int Get(int v)
         {
+            if( v >= count)
+                throw new IndexOutOfRangeException();
             return items[v];
         }
     }
